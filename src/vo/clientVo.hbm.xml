@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="vo.clientVo" table="ClientInfo">
+
+		<id name="id" type="int" column="ID">
+			<generator class="increment" />
+		</id>
+
+		<property name="clientID">
+			<column name="clientID"/>
+		</property>
+		
+		<property name="clientName">
+			<column name="Name" />
+		</property>
+		
+		<property name="clientAge">
+			<column name="Age" />
+		</property>
+		
+		<property name="clientTelephone">
+			<column name="Telephone" />
+		</property>
+		
+		<property name="clientEmailid">
+			<column name="EmailID" />
+		</property>
+		
+		<property name="clientDOB">
+			<column name="DateOfBirth" />
+		</property>
+		
+		<property name="clientCountry">
+			<column name="Country" />
+		</property>
+		<property name="clientState">
+			<column name="State" />
+		</property>
+		<property name="clientCity">
+			<column name="City" />
+		</property>
+		<property name="clientAddress1">
+			<column name="Addressline1" />
+		</property>
+		<property name="clientAddress2">
+			<column name="Addressline2" />
+		</property>
+		<property name="clientEmployment">
+			<column name="Employed" />
+		</property>
+
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="vo.policyVo" table="policyInformation">
+      <id name="policy_Id" type="int" column="policy_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="policyName"> 
+      <column name="policyName"/></property>
+      <property name="policyNumber">
+      <column name="policyNumber"/></property>
+       <property name="policyAmount"> 
+      <column name="policyAmount"/></property>
+      <property name="policyType">
+      <column name="policyType"/></property>
+      <property name="policyCompany">
+      <column name="policyCompany"/></property>
+      <property name="policyPlan">
+      <column name="policyPlan"/></property>
+      <property name="policyTerm">
+      <column name="policyTerm"/></property>
+      
+      
+        
+   </class>
+</hibernate-mapping>

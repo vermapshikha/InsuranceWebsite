@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="vo.agentVo" table="agentRegister">
+      <id name="agent_ID" type="int" column="agent_ID">
+         <generator class="increment"/>
+      </id>
+      <property name="agentName">
+      	<column name ="Name"/>
+      	</property>
+     
+      	 <property name="agentDOB">
+      	<column name ="DOB"/>
+      	</property>
+     
+     <many-to-one name="countryID" column="countryid" class="vo.countryVo"></many-to-one>
+     <many-to-one name="stateID" column="stateid" class="vo.stateVo"></many-to-one>	
+     <many-to-one name="cityID" column="cityid" class="vo.cityVo"></many-to-one>
+      	 
+      	<property name="agentAddress">
+      	<column name ="Address"/>
+      	</property>
+      	
+      	<property name="agentPhone">
+      	<column name ="Contact"/>
+      	</property>
+        
+        <property name="agentEmail">
+      	<column name ="Email"/>
+      	</property>
+      	
+      	   
+        <property name="agentGender">
+      	<column name ="Gender"/>
+      	</property>
+       <property name="agentDes">
+      	<column name ="Description"/>
+      	</property>
+       
+    
+      
+     <many-to-one name="companyID" column="companyID" class="vo.companyVo"></many-to-one>
+     
+     
+   </class>
+</hibernate-mapping>
+      	
+     
+     
+ 

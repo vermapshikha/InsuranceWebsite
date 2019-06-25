@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="vo.FileVO" table="FileUpload">
+
+	<id name="fileid" column="fileID">
+		<generator class="increment" />
+	</id>
+	
+	<property name="filename">
+		<column name="fileName"/>
+	</property> 
+
+	<property name="filepath">
+		<column name="filePath"/>
+	</property> 
+
+	<many-to-one name="cvo" class="vo.companyVo" column="c_ID"> </many-to-one>
+<many-to-one name="avo" class="vo.agentVo" column="agent_ID"> </many-to-one>
+</class>
+
+</hibernate-mapping>

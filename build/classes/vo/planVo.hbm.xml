@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="vo.planVo" table="PolicyPlan">
+      <id name="plan_id" type="int" column="plan_id">
+         <generator class="increment"/>
+      </id>
+      <property name="planName"> 
+      <column name="PlanName"/></property>
+      <property name="planDes">
+      <column name="Description"/></property>
+      <property name="PlanStatus">
+      <column name="Status"/></property>
+      <many-to-one name="cvo" class="vo.companyVo" column="company_id"> </many-to-one>     
+   </class>
+</hibernate-mapping>

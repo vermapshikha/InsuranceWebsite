@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="vo.complainVo" table="Complain">
+		<id name="complainID" type="int" column="complainID">
+			<generator class="increment" />
+		</id>
+		<property name="complainName">
+			<column name="CName" />
+		</property>
+		<property name="complainEmail">
+			<column name="CEmail" />
+		</property>
+		<property name="complainSubject">
+			<column name="CSubject" />
+		</property>
+		<property name="complainDes">
+			<column name="Cdescription" />
+		</property>
+		<property name="complainreplyDescription">
+			<column name="CreplyDescription" />
+		</property>
+		<property name="complainDate">
+			<column name="Cdate" />
+		</property>
+		<property name="complainTime">
+			<column name="Ctime" />
+		</property>
+
+		<many-to-one name="complainFrom" class="vo.loginVo"
+			column="complainFrom"></many-to-one>
+		<many-to-one name="complainTo" class="vo.loginVo" column="complainTo"></many-to-one>
+		<property name="complainStatus">
+			<column name="complainStatus" />
+		</property>
+
+
+	</class>
+</hibernate-mapping>

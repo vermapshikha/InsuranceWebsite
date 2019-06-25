@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="vo.RegVo" table="policyguideline">
+      <id name="pg_id" type="int" column="pg_id">
+         <generator class="increment"/>
+      </id>
+      <many-to-one name="cvo" column="companyid"></many-to-one>
+     <many-to-one name="pvo" column="planid"></many-to-one>
+     <many-to-one name="nvo" column="policyid"></many-to-one>
+     
+      	
+      	 <property name="age">
+      	<column name ="Age"/>
+      	</property>
+     
+      	
+      	 <property name="term">
+      	<column name ="Term"/>
+      	</property>
+      	
+      	 <property name="amount">
+      	<column name ="Amount"/>
+      	</property>
+    
+     
+   </class>
+</hibernate-mapping>
+      	
+     
+     
+ 
